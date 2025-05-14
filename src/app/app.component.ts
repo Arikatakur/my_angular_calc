@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  standalone: true,
+  imports: [CalculatorComponent],
+  template: `<app-calculator></app-calculator>`,
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'temp';
-}
+export class AppComponent { }
