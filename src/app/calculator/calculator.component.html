@@ -1,1 +1,12 @@
-<p>calculator works!</p>
+<div class="calculator">
+  <input [(ngModel)]="display" disabled class="display" />
+
+  <div class="buttons">
+    <button *ngFor="let btn of buttons" (click)="press(btn)">{{ btn }}</button>
+  </div>
+
+  <div class="actions">
+    <button (click)="clear()">C</button>
+    <button (click)="calculate()">=</button>
+  </div>
+</div>
